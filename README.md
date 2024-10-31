@@ -28,7 +28,7 @@ This command will:
 If your firewall is preventing access, use this command to temporarily disable it:
 
 ```bash
-sudo cp /etc/iptables/rules.v4 /etc/iptables/rules.v4.bak && sudo truncate -s 0 /etc/iptables/rules.v4
+sudo cp /etc/iptables/rules.v4 /etc/iptables/rules.v4.bak && sudo truncate -s 0 /etc/iptables/rules.v4 && sudo ufw disable
 ```
 
 This command backs up your current firewall rules and clears them. **Be cautious**, as this will disable all firewall protection on the server. Make sure to re-enable it when you’re done testing.
